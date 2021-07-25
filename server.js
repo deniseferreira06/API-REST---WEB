@@ -9,9 +9,9 @@ Data :
 const express = require('express');
 const app = express();
 const data = require("./data.json");
-
+const cors = require("cors");
 app.use(express.json());
-
+app.use(cors());
 // verbos HTTP
 // GET : Receber
 // POST : Enviar
