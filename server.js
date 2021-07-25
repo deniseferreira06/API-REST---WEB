@@ -17,6 +17,11 @@ app.use(cors());
 // POST : Enviar
 // PUT : Atualizar
 // DELETE : Deletar
+let port = process.env.PORT;
+if (port == null || port == "") {
+    port = 8000;
+}
+app.listen(port);
 
 app.get("/clients", function(req, res) {
   res.json(data);
